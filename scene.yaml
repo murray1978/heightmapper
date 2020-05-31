@@ -129,8 +129,6 @@ layers:
                     fill: cyan
 	topo:
         data: { source: mapzen }
-		filter:
-			kind: highway
         draw:
             toggletopo:
                 order: 1
