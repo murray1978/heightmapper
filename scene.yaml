@@ -148,8 +148,11 @@ layers:
                     size: 10px
                     fill: cyan
 	topo:
-		terrain:
-        data: { source: elevation, layer: _default }
+        data: { source: mapzen }
+		filter:
+			kind: 
         draw:
             toggletopo:
                 order: 1
+				
+				
