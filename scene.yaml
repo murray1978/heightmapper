@@ -64,7 +64,6 @@ styles:
 			blocks:
 				color:
 					color.a *= u_alpha;
-
 layers:
     terrain:
         data: { source: elevation, layer: _default }
