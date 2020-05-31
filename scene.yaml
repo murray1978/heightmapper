@@ -60,6 +60,9 @@ styles:
         shaders:
             uniforms:
 				u_alpha: .0
+			blocks:
+                color:
+                    color.a *= u_alpha;
 layers:
     terrain:
         data: { source: elevation, layer: _default }
