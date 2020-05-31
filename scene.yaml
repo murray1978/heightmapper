@@ -56,7 +56,7 @@ styles:
                 color:
                     color.a *= u_alpha;
 	toggletopo:
-        base: lines
+        base: raster
         blend: overlay
         shaders:
             uniforms:
@@ -131,3 +131,9 @@ layers:
                     family: Arial
                     size: 10px
                     fill: cyan
+	topo:
+		terrain:
+        data: { source: elevation, layer: _default }
+        draw:
+            toggletopo:
+                order: 0
