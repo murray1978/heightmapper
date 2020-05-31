@@ -55,13 +55,13 @@ styles:
             blocks:
                 color:
                     color.a *= u_alpha;
-	toggletopo:
+    toggletopo:
         base: raster
-		blend: overlay
+        blend: overlay
         shaders:
             uniforms:
-				u_alpha: .0
-			blocks:
+                u_alpha: .0
+            blocks:
                 color:
                     color.a *= u_alpha;
 layers:
