@@ -34,6 +34,7 @@ map = (function () {
 
     var query = splitQueryParams();
     // { language: 'en', this: 'no'}
+	
 
     function splitQueryParams () {
        var str = window.location.search;
@@ -390,6 +391,7 @@ window.go = go;
     function toggleTopo(active) {
         // scene.config.layers.water.visible = active;
         scene.styles.toggletopo.shaders.uniforms.u_alpha = active ? 1. : 0.;
+		scene.styles.hillshade.shaders.uniforms.u_alpha = active ? 0. : 1.;
         scene.requestRedraw();
     }
 
