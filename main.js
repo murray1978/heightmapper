@@ -295,6 +295,11 @@ map = (function () {
         gui.add(gui, 'map_labels').name("map labels").onChange(function(value) {
             toggleLabels(value);
         });
+		
+		gui.map_topo = false;
+        gui.add(gui, 'map_topo').name("map top").onChange(function(value) {
+            toggleTopo(value);
+        });
 
         // gui.API_KEY = query.api_key || 'mapzen-XXXXXX';
         // gui.add(gui, 'API_KEY').name("API KEY").onChange(function(value) {
@@ -376,6 +381,13 @@ window.go = go;
     }
     // draw labels
     function toggleLabels(active) {
+        // scene.config.layers.water.visible = active;
+        scene.styles.toggletext.shaders.uniforms.u_alpha = active ? 1. : 0.;
+        scene.requestRedraw();
+    }
+	
+	// draw topo features
+    function toggleTopo(active) {
         // scene.config.layers.water.visible = active;
         scene.styles.toggletext.shaders.uniforms.u_alpha = active ? 1. : 0.;
         scene.requestRedraw();
