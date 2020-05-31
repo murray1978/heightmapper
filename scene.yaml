@@ -57,7 +57,7 @@ styles:
                     color.a *= u_alpha;
 	toggletopo:
         base: raster
-		blend: ovelay
+		blend: overlay
         shaders:
             uniforms:
 				u_alpha: .0
