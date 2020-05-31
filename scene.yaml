@@ -55,6 +55,15 @@ styles:
             blocks:
                 color:
                     color.a *= u_alpha;
+	toggletopo:
+        base: text
+        blend: overlay
+        shaders:
+            uniforms:
+                u_alpha: .0
+            blocks:
+                color:
+                    color.a *= u_alpha;
 #	toggletopo:
 #		base: text
 #		blend: overlay
