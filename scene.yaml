@@ -56,7 +56,7 @@ styles:
                 color:
                     color.a *= u_alpha;
 	toggletopo:
-        base: text
+        base: lines
         blend: overlay
         shaders:
             uniforms:
@@ -64,15 +64,6 @@ styles:
             blocks:
                 color:
                     color.a *= u_alpha;
-#	toggletopo:
-#		base: text
-#		blend: overlay
-#		shaders:
-#			uniforms:
-#				u_alpha: .0
-#			blocks:
-#				color:
-#					color.a *= u_alpha;
 layers:
     terrain:
         data: { source: elevation, layer: _default }
