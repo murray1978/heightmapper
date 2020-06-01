@@ -390,8 +390,8 @@ window.go = go;
 	// draw topo features
     function toggleTopo(active) {
         // scene.config.layers.water.visible = active;
-		scene.config.layers.terrain.visible = active ? 0. : 1.;
-		scene.config.layers.topo.visible = active ? 1. : 0.;
+		scene.layers.terrain.visible = active ? 0. : 1.;
+		scene.layers.topo.visible = active ? 1. : 0.;
         scene.requestRedraw();
     }
 
