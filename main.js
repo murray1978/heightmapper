@@ -390,8 +390,8 @@ window.go = go;
 	// draw topo features
     function toggleTopo(active) {
         // scene.config.layers.water.visible = active;
-        scene.styles.toggletopo.shaders.uniforms.u_alpha = active ? 1. : 0.;
-		scene.styles.hillshade.shaders.uniforms.u_alpha = active ? 0. : 1.;
+		scene.config.layers.terrain.visible = active ? 0. : 1.;
+		scene.config.layers.topo.visible = active ? 1. : 0.;
         scene.requestRedraw();
     }
 
